@@ -1,0 +1,22 @@
+#!/bin/bash
+#
+# Hüpotenuusi arvutamine
+#
+# Skripti algus
+#
+echo
+echo -n "Sisesta a külje väärtus:"
+read a
+echo -n "Sisesta b külje väärtus:"
+read b
+#
+#Arvutamine
+#
+a_ruut=$(($a ** 2)) # a ruudus
+b_ruut=$(($b ** 2)) # b ruudus 
+c_ruut=$(($a_ruut+$b_ruut)) #c ruudus ehk a ruudus ja b ruudus summa kokku
+c='echo "scale=2;sqrt($c_ruut)|bc' #bc arvutab ruutjuurt
+echo "c=$c"
+#
+#lõpp
+
