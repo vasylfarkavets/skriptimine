@@ -1,0 +1,27 @@
+#!/bin/bash
+#
+#serveri seisundi väljastamine
+#
+#skripti algus
+#
+# inimeste andmed
+#
+echo -n "Sisesta reisijate arv:"
+read reisijad
+#kohtade andmed bussis
+echo -n "Sisesta kohtade arv bussis:"
+read kohad
+#
+# arvutamine
+#
+#jagame inimesed busside vahel nii, et kõik kohad bussides oleks täidetud seega saame teada palju busse vaja on
+bussid=`expr $reisijad/$kohad`
+#vaatame, palju on neid, kes ei saanud koha bussides ehk jäägid
+#
+ylejaanud=`expr $reisijad % $kohad`
+#
+# tulemuste väljastamine
+#
+echo " kokku on vaja #bussid busse ja sellega jääb veel $ylejaanud inimesi kohtadest ilma"
+#
+# lõpp
