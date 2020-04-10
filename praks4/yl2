@@ -1,0 +1,45 @@
+#!/bin/bash
+#
+# sorteeritud logid
+#
+# skripti algus
+#
+echo
+# kandiku andmed
+
+echo -n "Sisesta kandiku pikku ja laius (cm):"
+read k_pikkus k_laius
+# küpsise andmed
+echo -n "Sisesta küpsise pikkus ja laius(cm):"
+read ky_pikkus ky_laius
+echo -n "sisesta küpsiste arv pakis(tk):"
+read pakis
+#kihtide arv
+echo -n "sisesta tordikihtide arv:(Number):"
+read kihid
+#
+# arvutamine
+#
+#kandiku pindala
+kandik=`expr $k_pikkus\*$k_laius`
+#
+#küpsise pindala
+kypsis=`expr $ky_pikkus\*$ky_laius`
+#
+#palju küpsiseid mahub kandikule peale ühes kihis kandiku pindala jagatud küpsise pindalaga
+yhes_kihis=`expr $kandik/$kypsis`
+#
+#kokku küpsised tervel tordil on ühes kihis küpsiiste arv korrutatud kihtide arvuga
+kypsised=`expr $yhes_kihis\*$kihid`
+#
+#pakkide arvu saame siis kui kõik küpsided jagame ühes pakis olevate küpsiste aruga
+pakk_arv=`expr $kypsised/$pakis`
+#
+#kasutamata küpsiste arv on jääk kõidisest küpsistest, kui nad on jagatud pakkide vahel 
+jaak=`expr $küpsised % $pakis`
+#
+# tulemuste väljastamine
+#
+echo "kokku on vaja $pakk_arv pakki ja lisaks veel $jaak küpsist"
+#
+# lõpp
