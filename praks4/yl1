@@ -1,0 +1,12 @@
+#!/bin/bash
+#
+# kasutaja tervitus
+#
+# skripti algus
+#
+echo
+echo -n "Sisesta ees- ja perenimi:"
+read nimi
+echo "Tere tulemast, $nimi"
+#
+#skripti lõpp
