@@ -1,0 +1,27 @@
+#!/bin/bash
+#
+#Skript, mis tervitab, kas tegu on hommiku, õhtu või lõuna tervitusega.
+#
+echo
+echo "Sisesta kellaaeg tundides: "
+read aeg
+if test $aeg -ge 6 -a $aeg -lt 12 # kell 6-12 siis on hommikust lõunani
+then
+	echo "Tere Hommikust!"
+elif test $aeg -ge 12 -a $aeg -lt 18 # siis kell lõunast õhtuni tervitus
+then
+	echo "Tere päevast!"
+elif test $aeg -ge 18 -a $aeg -lt 22 # siis tervitab 18-22 vahemikus
+then
+	echo "Tere õhtust!"
+elif test $aeg -ge 22 -a $aeg -lt 24 # kell 22-24 vahemikus
+then
+	echo "Head ööd!"
+elif test $aeg -ge 0 -a $aeg -lt 6 #südaööst kuni 6 hommikuni tervitab
+then
+	echo "Head ööd!"
+else
+	echo "Valesti sisestatud kellaaeg" #veateade
+fi
+
+#skripti lõpp
