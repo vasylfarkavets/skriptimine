@@ -1,0 +1,18 @@
+#!/bin/bash
+#
+#skript, mis arvutab esimese 10 paarisarvude summa
+#
+#algus
+echo
+summa=0
+for (( arv=1; arv<11; arv++ )) # arvud 1-10
+do
+		jaak=$(($arv % 2)) # leiab paarisarvud
+		if test $jaak -eq 0
+		then
+			summa=$(($summa + $arv)) #leiab paarisarvude summa
+		fi
+done
+echo "Esimese 10 arvu summa on $summa!" #väljastab summa
+echo
+#skripti lõpp
