@@ -1,0 +1,10 @@
+#!/bin/bash
+#
+# Minu muljed antud ainest
+#
+echo "Vasyl Farkavets" #väljastab minu nime
+echo "IS19" #väljastab IS19
+echo "Selles aines olen veel amatöör aga õppimine teeb targaks" 
+echo "Hetkel saan hakkama ja loodetavasti oskan paremini tulevikus"
+
+
