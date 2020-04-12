@@ -1,0 +1,26 @@
+#!/bin/bash
+#
+# skript, mis küsib kuu numbrit ja väljastab aastaaja
+#
+echo
+echo "Sisesta kuu number: "
+read kuu
+echo
+if test $kuu -eq 1 -o $kuu -eq 2 -o $kuu -eq 12 # kui number kuu number on 12, 1 või 2 , siis on talv
+then
+	echo "Hetkel on talv"
+elif test $kuu -ge 3 -a $kuu -le 5 #kuu number 3,4,5 siis on kevad
+then
+	echo "Hetkel on kevad"
+elif test $kuu -ge 6 -a $kuu -le 8 # kuu numbrid 6,7,8, siis on suvi
+then 
+	echo "Hetkel on suvi"
+elif test $kuu -ge 9 -a $kuu -le 11 # kuu numbrid 9,10,11, siis on sügis
+then
+	echo "Hetkel on sügis"
+else
+	echo "Vigane kuu number" #Kui number on vigaselt lisatud, annab veateate
+fi
+
+#skripti lõpp
+
