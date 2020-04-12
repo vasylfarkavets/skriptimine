@@ -1,0 +1,18 @@
+#!/bin/bash
+#
+#Skrpit, mis küsib reisjate arvu ja kohtade arvu bussis kasutajalt
+echo
+echo "Sisesta reisijate arv: "
+read reisijatearv
+
+echo "Sisesta kohtade arv bussis: "
+read kohtadearv
+bussidearv=$(($reisijatearv / $kohtadearv)) #mitu bussi vaja
+jaak=$(($reisijatearv % $kohtadearv)) #jäägid, ehk palju on neid kes ei mahtunud bussi
+if test $jaak -gt 0
+then
+	bussidearv=$(($bussidearv + 1)) #kui on vaja bussi siis liidan juurde
+fi
+echo "Kokku on vaja $bussidearv busse"
+# skipti lõpp
+
