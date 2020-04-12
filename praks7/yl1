@@ -1,0 +1,26 @@
+#!/bin/bash
+#
+# Vanuse järgi väljastamine
+#
+echo
+echo  "Sisesta siia oma  vanuse: "
+read vanus
+echo
+if test $vanus -ge 0 -a $vanus -lt 11  #vanus 0 - 11 vahel
+then
+	echo " sa oled laps " #kui vastus on 11 - 18 vahel
+elif test $vanus -ge 11 -a $vanus -lt 18  # vanus 11 - 18 vahel
+then
+	echo "sa oled nooruk" #Oled nooruk kui  vanus on 11-18 vahel
+elif test $vanus -ge 18 -a $vanus -lt 63  # vanus 18-63 vahel
+then
+	echo " sa oled täiskasvanu" #vanus 18- 63 vahel
+elif test $vanus -ge 63  #Kontrollib, kas number on üle 63
+then
+	echo "oled seenior" #väljastab sõnumi seenior
+else
+	echo " vigane sisend" #näitab vigast väljendit, kui neid tingimusi ei täideta
+fi
+
+# skripti lõpp
+
