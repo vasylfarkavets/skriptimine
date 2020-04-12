@@ -1,0 +1,16 @@
+#!/bin/bash
+#
+#skript, mis väljastab kas tegu on paaris- või paaritu arvuga
+echo
+echo "Sisestage üks suvaline täisarv: "
+read arv
+a=`echo "$arv / 2" | bc` #leian mitu korda arv jagub 2ga
+jaak=`echo "$arv - $a * 2" | bc` #leian jäägi
+if [ $jaak = 1 ]
+then
+	echo "$arv on paaritu arv"
+else
+	echo "$arv on paarisarv"
+fi
+#
+#skripti lõpp 
