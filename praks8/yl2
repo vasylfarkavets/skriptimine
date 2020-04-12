@@ -1,0 +1,25 @@
+#!/bin/bash
+#
+# arvu numbrite summa
+echo
+echo "Sisesta suvaline täisarv: "
+read arv
+echo -n "Arvu $arv numbrite summa on "
+#
+if test $arv -lt 0 #kas tegu on positiivne arv
+then
+	arv=$(($arv * -1))
+	echo -n "-" #kui ei ole positiivne arv siis lisab - ette
+fi
+#
+summa=0
+while [ $arv -ne 0 ]
+do
+		jaak=$(($arv % 10))
+		summa=$(($summa + $jaak))
+		arv=$(($arv / 10))
+done
+echo "$summa " #väljastab tulemuse, kui arv oli negatiivne siis lisab ette "miinus" märgi
+#
+#skripti lõpp
+
