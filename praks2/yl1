@@ -1,0 +1,11 @@
+#!/bin/bash
+#
+# Tervitus skript
+#
+echo -n "Tere, " #väljastab ilma reavahetuseta Tere,
+echo -n "User" #väljastab reavahetuseta User
+echo -n "!" #Lisab useri lõppu "!" märgi
+
+#
+#skripti lõpp
+
